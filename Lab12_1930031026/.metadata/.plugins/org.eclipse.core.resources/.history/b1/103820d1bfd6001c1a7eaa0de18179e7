@@ -1,0 +1,23 @@
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+public class ViewNumber extends View<Controller>{
+	private JLabel label;
+	public ViewNumber(Model m, Controller c) {
+		super(m, c);
+		this.setTitle("View Number");
+		this.setSize(150, 150);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new GridLayout(2, 1));
+		JLabel label = new JLabel();
+		this.label = label;
+		label.setText("The number of points is "+this.m.numberOfPoints());
+		update();
+		this.add(label);
+	}
+	public void update() {
+		repaint();
+	}
+	
+}

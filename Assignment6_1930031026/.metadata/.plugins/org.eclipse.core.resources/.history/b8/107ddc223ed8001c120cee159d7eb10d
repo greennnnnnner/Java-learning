@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class Model {
+	private int score;
+	private ArrayList<IShape> bubbles;
+	public Model() {
+		this.score = 0;
+		bubbles = new ArrayList<IShape>();
+	}
+	public int getScore() {
+		return this.score; 
+	}
+	public void addBubble(int w, int h) {
+		Bubble b = new Bubble((int)(w*Math.random()), (int)(h* Math.random()));
+		this.bubbles.add(b);
+	}
+
+}

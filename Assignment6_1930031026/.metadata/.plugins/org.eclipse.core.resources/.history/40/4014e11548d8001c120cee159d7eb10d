@@ -1,0 +1,34 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+public class ViewBubbles extends JPanel{
+	private Model model;
+	public ViewBubbles(Model model) {
+		this.model = model;
+		this.addMouseListener(new MouseAdapter() {
+			// If the user clicks somewhere with the mouse:
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				clickBubbles(e.getX(), e.getY());
+
+			}
+		});
+		Timer t = new Timer(500, new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				moveUp(getWidth(), getHeight());//move bubbles with time changed
+			}
+		});
+			//start the timer!
+		t.start();
+	}//constructor
+	private void moveUp(int w, int h) {
+		model.moveAll(w, h);
+	}
+	
+}

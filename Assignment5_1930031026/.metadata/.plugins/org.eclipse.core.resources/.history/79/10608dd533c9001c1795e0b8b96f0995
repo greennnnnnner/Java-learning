@@ -1,0 +1,5 @@
+
+public interface Movable {
+	private int te;
+	public int accelerate(int amount);
+}

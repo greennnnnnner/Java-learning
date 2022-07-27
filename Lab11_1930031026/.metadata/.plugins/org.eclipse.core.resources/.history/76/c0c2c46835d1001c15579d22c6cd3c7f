@@ -1,0 +1,22 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame{
+	public MyFrame() {
+		this.setTitle("MyFrame Title");
+		this.setSize(400, 300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout(FlowLayout.CENTER)); // Layout manager.
+		JButton b1 = new JButton("left"); 
+		this.add(b1);
+		JButton b2 = new JButton("right");
+		this.add(b2);
+		
+		b1.addMouseListener(new MyMouseListener());
+		this.setVisible(true);
+	}
+}

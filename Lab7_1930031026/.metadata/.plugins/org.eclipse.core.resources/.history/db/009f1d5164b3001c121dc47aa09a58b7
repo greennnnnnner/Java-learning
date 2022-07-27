@@ -1,0 +1,12 @@
+package question8;
+
+public class Start {
+	public static void main(String[] args) {
+		Animal.testAnimal();
+		Dog.testDog();
+		Bird.testBird();
+		Magpie.testMagpie();
+		Ostrich.testOstrich();
+		Pegasus.testPegasus();
+	}//Animal. Dog or Bird classes can not be tested through the Flyer interface, because interface cannot be initialized
+}

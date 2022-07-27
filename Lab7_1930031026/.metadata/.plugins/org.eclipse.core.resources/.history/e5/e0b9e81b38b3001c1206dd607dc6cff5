@@ -1,0 +1,16 @@
+package question1;
+
+public abstract class Animal {//should be abstract, because this class contains abstract methods
+	private String name;
+	public Animal(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return this.name;
+	}
+	public abstract int getLegs();//be abstract because 
+	public abstract boolean canFly();
+	public static void testAnimal() {
+		
+	}
+}

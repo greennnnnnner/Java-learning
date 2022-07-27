@@ -1,0 +1,9 @@
+
+public class Car {
+	private String name;
+	private Door[] doors;
+	public Car(String name, int numberOfDoors) {
+		this.name=name;
+		this.doors = new Door[numberOfDoors];
+	}
+}

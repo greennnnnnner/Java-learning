@@ -1,0 +1,12 @@
+
+public class Train extends Vehicle{
+	public Train(int speedLimit, int speed) throws BadSpeedSetting {
+		super(speedLimit, speed);
+	}
+	public boolean canFly() {
+		return false;
+	}
+	public int accelerate(int amount)throws ExceedSpeedLimit, NotEnoughSpeed,TrainSpeedChange {//override accelerate function
+		throw new TrainSpeedChange("Do not try to accelerate or decelerate the train!!!");
+	}
+}

@@ -1,0 +1,19 @@
+
+public class ControllerCreate extends Controller{
+	public ControllerCreate(Library m) {
+		super(m);
+	}
+	public String create(String name, String number, int type) {
+		if(type==0) {//if it's a lender
+			m.addUser(new Lender(name, Integer.parseInt(number)));//add a new lender
+		}else if(type==1) {
+			try {
+				m.addUser(new Borrower(name, Integer.parseInt(number)));
+			} catch (NumberFormatException e) {
+				return e.getMessage();
+			} catch (NotALenderException e) {
+				return e.getMessage();
+			}
+		}
+	}
+}

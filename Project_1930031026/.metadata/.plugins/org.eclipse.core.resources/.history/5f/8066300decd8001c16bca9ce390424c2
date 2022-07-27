@@ -1,0 +1,9 @@
+import javax.swing.JTextField;
+
+public class ViewMoreBook extends View<ControllerMoreBook>{
+	private JTextField t1;
+	private JTextField t2;
+	public ViewMoreBook(Library m, ControllerMoreBook c) {
+		super(m,c);
+	}
+}

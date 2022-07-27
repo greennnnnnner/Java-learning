@@ -1,0 +1,45 @@
+import java.awt.Point;
+import java.util.ArrayList;
+public class Model {
+	private ArrayList<Point> points; 
+	private ArrayList<ModelListener> listeners;
+	public Model() {	
+		points = new ArrayList<Point>();
+		listeners = new ArrayList<ModelListener>();
+	}
+	public void addListener(ModelListener l) {
+		this.listeners.add(l);
+	}//add model listener to arraylist
+	public ArrayList<Point> getPoints() {
+		return this.points;
+	}//return to arraylist of points
+	public void addPoint(Point p){
+		this.points.add(p);
+		this.notifyListeners();//notify all the listeners after commiting change
+	}//add point into arraylist
+		
+	public void clearAllPoints() {
+		this.points.clear();
+		this.notifyListeners();//notify all the listeners after commiting change
+	}//clear all the points in the arrayList
+	
+	public void deleteLastPoint() {
+		if(this.points.size() > 0) {
+			this.points.remove(points.size() - 1);
+			this.notifyListeners();//notify all the listeners after commiting change
+		}//delete the last member of this arrayList
+	}
+	
+	public void notifyListeners() {
+		for(ModelListener m: this.listeners) {
+			m.update();//enhanced for loop
+		}
+	}
+	public int numberOfPoints() {
+		return this.points.size();
+	}
+	public static void testModel() {
+	}
+	
+	
+}

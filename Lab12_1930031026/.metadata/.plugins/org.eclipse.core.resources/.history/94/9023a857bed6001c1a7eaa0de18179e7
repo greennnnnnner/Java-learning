@@ -1,0 +1,4 @@
+
+public class ViewNumber extends View<Controller>{
+	private JLable label;
+}

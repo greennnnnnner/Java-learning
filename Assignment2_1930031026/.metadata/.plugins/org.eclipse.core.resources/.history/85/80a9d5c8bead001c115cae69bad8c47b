@@ -1,0 +1,13 @@
+package question1;
+
+public class Running extends Sport{
+	private double length;
+	public Running(int playerNumber, double length) {
+		super(playerNumber);
+		this.length=length;
+	}
+	public double getLength{
+		return this.length;
+	}
+	
+}

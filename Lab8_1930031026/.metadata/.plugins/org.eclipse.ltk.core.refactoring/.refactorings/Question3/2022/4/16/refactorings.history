@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;Question4/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Question3&apos;&#x0D;&#x0A;- Destination element: &apos;Question4/src/(default package)&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Start.java&#x0D;&#x0A;     Circle.java&#x0D;&#x0A;     Dot.java&#x0D;&#x0A;     Shape.java" description="Copy compilation units" destination="=Question4/src&lt;" element1="/src&lt;{Start.java" element2="/src&lt;{Circle.java" element3="/src&lt;{Dot.java" element4="/src&lt;{Shape.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1650111940729" units="4" version="1.0"/>
+</session>

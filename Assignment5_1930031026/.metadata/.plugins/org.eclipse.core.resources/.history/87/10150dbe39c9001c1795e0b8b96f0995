@@ -1,0 +1,6 @@
+
+public class NotEnoughSpeed extends Exception{
+	public NotEnoughSpeed(Str msg) {
+		super(msg);
+	}
+}

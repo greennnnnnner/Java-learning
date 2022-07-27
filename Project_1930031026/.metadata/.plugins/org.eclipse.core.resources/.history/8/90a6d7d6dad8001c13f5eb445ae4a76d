@@ -1,0 +1,22 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class ViewSimple extends JFrame{
+	private Library m;
+	private ControllerSimple c;
+	private JLabel label;
+	public ViewSimple(Library m, ControllerSimple c) {
+		this.m = m;
+		this.c = c;
+		this.setTitle("View Reset");
+		this.setSize(150, 150);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		label = new JLabel();
+		label.setText("total number of borrowed boods: "+m.totalBorrowedBooks());
+		this.add(label);
+		this.setVisible(true);
+	}//constructor of view
+	public void update() {
+		label.setText("total number of borrowed boods: "+m.totalBorrowedBooks());
+	}
+}

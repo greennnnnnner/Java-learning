@@ -1,0 +1,13 @@
+
+public class Train extends Vehicle{
+	public Train(int speedLimit, int speed) throws BadSpeedSetting {
+		super(speedLimit, speed);
+	}
+	public boolean canFly() {
+		return false;
+	}
+	public int accelerate(int amount) {
+		
+		return this.getSpeed();
+	}
+}

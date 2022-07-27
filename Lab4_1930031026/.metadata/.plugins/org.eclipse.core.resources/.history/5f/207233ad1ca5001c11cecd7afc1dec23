@@ -1,0 +1,15 @@
+package question1;
+
+public class Start {
+public static void main(String[] args) {
+	Student.testStudent();//test\
+	Start.check();
+	}
+public String check(Student s) {
+	if(s.isSleeping()==true) {
+		return "sweet dreams";
+	}else {
+		return "need coffee";
+	}
+}
+}

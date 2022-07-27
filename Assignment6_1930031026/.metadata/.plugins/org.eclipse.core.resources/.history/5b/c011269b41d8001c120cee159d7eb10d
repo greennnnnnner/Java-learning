@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+
+public class Model {
+	private int score;
+	private ArrayList<IShape> bubbles;
+	public Model() {
+		this.score = 0;
+		bubbles = new ArrayList<IShape>();
+	}
+	public int getScore() {
+		return this.score; 
+	}
+	public void addBubble(int w, int h) {
+		Bubble b = new Bubble((int)(w*Math.random()), (int)(h* Math.random()));//instantiate a new bubble
+		this.bubbles.add(b);
+	}
+	public void moveAll(int dx, int dy) {
+		for(IShape i: this.bubbles) {//an enhanced for loop to move all the members inside this arraylist
+			i.setX(i.getX()+dx);
+			i.setY(i.getY()+dy);
+		}
+	}
+	public void clearInvisibles(int w, int h) {
+		for(int i = bubbles.size()-1; i>=0; i--) {//a for loop to delete all the members inside this arraylist that are not visible
+			if(!this.bubbles[i].isVisible(w, h)) {
+				this.bubbles.remove(i);//remove invisible bubbles
+			}
+		}
+	}
+	public void deleteBubblesAtPoint(int x, int y) {
+		
+	}
+}

@@ -1,0 +1,15 @@
+
+public class Square extends Rectangle{
+	public Square(double x, double y, double width){
+		super(x,y,width,width);
+	}
+	//don't need own area and resize methods
+	public static void testSquare() {
+		Square s = new Square(2.0,1.0,3.0);
+		System.out.println(s.getX()==2.0);
+		System.out.println(s.getY()==1.0);
+		System.out.println(s.area()==9.0);
+		s.resize(4.0);
+		System.out.println(s.area()==16.0);
+	}
+}

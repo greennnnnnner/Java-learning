@@ -1,0 +1,19 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class ViewSimple extends View<ControllerSimple>{
+	private JLabel label;
+	public ViewSimple(Library m, ControllerSimple c) {
+		super(m,c);
+		this.setTitle("View Reset");
+		this.setSize(300, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		label = new JLabel();
+		label.setText("total number of borrowed books: "+m.totalBorrowedBooks());
+		this.add(label);
+		this.setVisible(true);
+	}//constructor of view
+	public void update() {
+		label.setText("total number of borrowed books: "+m.totalBorrowedBooks());
+	}
+}

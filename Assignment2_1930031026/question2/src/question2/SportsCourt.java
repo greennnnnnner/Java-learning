@@ -1,0 +1,17 @@
+package question2;
+
+public class SportsCourt {
+	private Sport sport;
+	public SportsCourt(Sport sport) {
+		this.sport=sport;
+	}
+	public Sport playSport() {
+		return this.sport;
+	}
+	public static void testSportsCourt() {
+		HalfMarathon hm1 = new HalfMarathon();//create half marathon object
+		SportsCourt sc = new SportsCourt(hm1);//create sportscourt object with half marathon object in it
+		HalfMarathon hm2 = (HalfMarathon) sc.playSport();
+		System.out.println(hm1==hm2);
+	}
+}

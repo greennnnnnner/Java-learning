@@ -1,0 +1,15 @@
+
+public class GUI {
+		public static void main(String[] args) {
+			javax.swing.SwingUtilities.invokeLater(new Runnable() {
+				@Override
+				public void run() {
+					Library m = new Library("UIC Library");
+					ControllerSimple c1 = new ControllerSimple(m);
+					new ViewSimple(m, c1);
+					ControllerGetBook c2 = new ControllerGetBook(m);
+					new ViewGetBook(m,c2);
+				}
+			});
+		}
+	}

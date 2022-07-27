@@ -1,0 +1,10 @@
+
+public class ControllerGetBook extends Controller{
+	public ControllerGetBook(Library m) {
+		super(m);
+	}
+	public String getBook(String name) {
+		
+		return Integer.toString(m.getBook(name));
+	}
+}

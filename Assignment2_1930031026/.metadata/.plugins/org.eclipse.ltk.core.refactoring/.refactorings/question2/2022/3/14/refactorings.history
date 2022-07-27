@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;&apos; to &apos;question2.SportsCourt.testSportsCourt()&apos;&#x0D;&#x0A;- Original project: &apos;question2&apos;&#x0D;&#x0A;- Destination element: &apos;question2.SportsCourt.testSportsCourt()&apos;&#x0D;&#x0A;- Original element: &apos;question2.SportsCourt.playSport()&apos;" description="Copy method" destination="/src&lt;question2{SportsCourt.java[SportsCourt~testSportsCourt" element1="/src&lt;question2{SportsCourt.java[SportsCourt~playSport" flags="589830" id="org.eclipse.jdt.ui.copy" members="1" policy="org.eclipse.jdt.ui.copyMembers" stamp="1648383607696" version="1.0"/>
+</session>

@@ -1,0 +1,35 @@
+
+public class Vehicle implements Movable{
+	private int speedLimit;
+	private int speed;
+	public Vehicle(int speedLimit, int speed) throws BadSpeedSetting{//constructor
+		if(speed<0 || speedLimit<0) {
+			throw new BadSpeedSetting("Speed cannot be negative!");
+		}
+		if(speed>speedLimit) {
+			throw new BadSpeedSetting("Speed cannot be greater than speed limit!");
+		}//throw exceptions
+		this.speedLimit = speedLimit;
+		this.speed = speed;
+	}
+	public int accelerate(int amount) throws Exception{
+		
+		if(amount >= 0 && this.speed+amount<=this.speedLimit) {
+			this.speed += amount;
+		}else if(this.speed+amount>speedLimit) {
+			throw new ExceedSpeedLimit("Current speed is "+this.speed+". Accelerate "+amount+" will exceed the speed limit!");
+		}else if(amount<0) {
+			throw new NotEnoughSpeed("Current speed is "+this.speed+", not enough speed to decelerate!");
+		}
+		return this.speed;
+	}
+	public int getSpeed() {
+		return this.speed;
+	}
+	public boolean canFly() {
+		return false;//default value
+	}
+	public static void testVehicle() {
+		//The Vehicle class is abstract. We cannot create objects from this class. Therefore, we cannot test anything
+			}
+}

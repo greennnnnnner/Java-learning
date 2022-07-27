@@ -1,0 +1,14 @@
+package question6;
+
+public class Pegasus extends Bird{
+	public Pegasus(String name) {
+		super(name,0);
+	}
+	public int getLegs() {
+		return 4;
+	}
+	public int getNumOfEggs() {
+		System.out.println("Pegasi do not lay eggs!");
+		return 0;
+	}
+}

@@ -1,0 +1,6 @@
+
+public class UnknownUserExceptionException extends Exception{
+	public UnknownUserExceptionException(String msg) {
+		super(msg);
+	}
+}

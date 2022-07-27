@@ -1,0 +1,15 @@
+import javax.swing.JLabel;
+public class ViewNumber extends View<Controller>{
+	private JLabel label;
+	public ViewNumber(Model m, Controller c) {
+		super(m, c);
+		JLabel label = new JLabel();
+		this.label = label;
+		label.setText("The number of points is "+this.m.numberOfPoints());
+		this.add(label);
+	}
+	public void update() {
+		
+	}
+	
+}

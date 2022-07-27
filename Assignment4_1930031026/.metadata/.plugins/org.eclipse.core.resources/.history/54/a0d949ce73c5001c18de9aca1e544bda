@@ -1,0 +1,6 @@
+import java.util.ArrayList;
+
+public class ManyCourses {
+	private ArrayList ManyCourses;
+	
+}

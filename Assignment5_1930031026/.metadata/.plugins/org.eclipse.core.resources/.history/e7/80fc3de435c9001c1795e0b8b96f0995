@@ -1,0 +1,6 @@
+
+public class ExceedSpeedLimit extends Exception{
+	public ExceedSpeedLimit(String str) {
+		super(str);
+	}
+}

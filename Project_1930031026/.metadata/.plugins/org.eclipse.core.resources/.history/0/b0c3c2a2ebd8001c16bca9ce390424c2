@@ -1,0 +1,11 @@
+
+public class ControllerMoreBook extends Controller{
+	public ControllerMoreBook(Library m) {
+		super(m);
+	}
+	public String moreBook(String name, String number) {
+		
+		m.moreBook(name, Integer.parseInt(number));
+		return "";
+	}
+}

@@ -1,0 +1,7 @@
+
+public class ControllerSimple extends Controller{
+	private Library m;
+	public ControllerSimple(Library m) {
+	
+	}
+}

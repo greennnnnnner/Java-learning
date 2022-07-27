@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+public class ManyVehicles{
+	private ArrayList<Vehicle> vehicles;//set arributes
+	public ManyVehicles(){//construtor
+		this.vehicles = new ArrayList<Vehicle>();
+	}
+	public void addVehicle(Vehicle v) {
+		this.vehicles.add(v);
+	}
+}

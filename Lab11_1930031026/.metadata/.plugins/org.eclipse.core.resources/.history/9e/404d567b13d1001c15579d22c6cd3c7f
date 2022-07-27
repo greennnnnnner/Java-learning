@@ -1,0 +1,24 @@
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame{
+	public MyFrame() {
+		this.setTitle("MyFrame Title");
+		this.setSize(400, 300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(new FlowLayout()); // Layout manager.
+		JButton b = new JButton("hello"); // Button.
+		this.add(b);
+		b.addActionListener(new ActionListener() { // Anonymous class{}
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			System.out.println("Button clicked!"+e.getActionCommand());
+		}
+		});
+		this.setVisible(true);
+		}
+}

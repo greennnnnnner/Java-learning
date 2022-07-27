@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class Library {
+	private String name;
+	private ArrayList<IUser> users;
+	public Library(String name) {//constructor
+		this.name = name;
+		ArrayList<IUser> users = new ArrayList<IUser>();//create a empty new arraylist
+	}
+	public void addUser(IUser user) {
+		users.add(user);//add member to arraylist
+	}
+	public int totalBorrowBooks() {
+		int total = 0;
+		for(IUser u : users) {
+			total += u.getBook();
+		}
+		return total;
+	}
+}

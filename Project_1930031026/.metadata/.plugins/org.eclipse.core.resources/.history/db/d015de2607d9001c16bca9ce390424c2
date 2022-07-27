@@ -1,0 +1,6 @@
+
+public class ControllerHistory extends Controller{
+	public ControllerHistroy(Library m) {
+		super(m);
+	}
+}

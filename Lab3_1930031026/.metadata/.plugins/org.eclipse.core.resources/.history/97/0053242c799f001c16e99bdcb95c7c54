@@ -1,0 +1,13 @@
+public class Student {
+	private int ID;
+	public Student(int ID) {
+		this.ID = ID;
+	}
+	public int getID() {
+		return this.ID;
+	}
+	public static void testStudent() {
+		Student Lucy = new Student(12345678);
+		System.out.println(Lucy.getID()==12345678);
+	}
+}

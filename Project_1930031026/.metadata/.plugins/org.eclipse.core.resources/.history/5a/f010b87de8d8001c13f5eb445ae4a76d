@@ -1,0 +1,21 @@
+
+public class GUI {
+		public static void main(String[] args) {
+			javax.swing.SwingUtilities.invokeLater(new Runnable() {
+				@Override
+				public void run() {
+					Library m = new Library("UIC Library");
+					m.addUser(new Lender("Anna", 5));
+					try {
+						m.addUser(new Borrower("Bob", 10));
+					} catch (NotALenderException e) {
+					}
+					ControllerGetBook c2 = new ControllerGetBook(m);
+					ControllerSimple c1 = new ControllerSimple(m);
+					new ViewSimple(m, c1);
+					
+					new ViewGetBook(m,c2);
+				}
+			});
+		}
+	}

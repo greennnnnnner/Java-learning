@@ -1,0 +1,14 @@
+package question5;
+
+public class Ostrich extends Bird{
+	public Ostrich(String name) {
+		super(name, 10);
+	}
+	public boolean canFly() {
+		return false;
+	}
+	public static void testOstrich() {
+		Os
+	}
+	
+}

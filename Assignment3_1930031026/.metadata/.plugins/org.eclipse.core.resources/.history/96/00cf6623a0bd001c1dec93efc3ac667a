@@ -1,0 +1,9 @@
+
+public class Human extends Mammal{
+	public Human(){
+		super("Alice");//super constructor, all human are named Alice
+	}
+	public boolean isCookable() {
+		return false;//override to avoid printing mesage
+	}
+}

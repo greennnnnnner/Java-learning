@@ -1,0 +1,37 @@
+
+public class Car {
+	private String name;
+	private Door[] doors;
+	public Car(String name, int numberOfDoors) throws BadCarException{
+		this.name=name;
+		if(numberOfDoors<1) {
+			throw new BadCarException("A car must have as least one door!");
+		}//throw exception if door is less than 1
+		this.doors = new Door[numberOfDoors];
+		
+	}
+	public void listDoors() {
+		for(Door d : this.doors) {
+			if(d.isOpen()) {
+				System.out.println(this.name+ ": door is open" );
+			}else {
+				System.out.println(this.name+ ": door is closed");
+			}
+		}
+	}
+	public int countOpenDoors() {
+		int c=0;
+		for(Door d: this.doors) {
+			if(d.isOpen()) {
+				c++;
+			}
+		}return c;
+	}
+	public void openOneDoor(int doorNumber) throws BadCarException{
+		if(doorNumber<1 || doorNumber >= this.doors.length) {
+			throw new BadCarException("Door "+ doorNumber + "does not exist!");
+		}
+		this.doors[doorNumber].open();
+		
+	}
+}

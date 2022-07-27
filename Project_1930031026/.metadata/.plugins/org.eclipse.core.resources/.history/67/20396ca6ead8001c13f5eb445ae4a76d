@@ -1,0 +1,6 @@
+
+public class ControllerMoreBook extends Controller{
+	public ControllerMoreBook(Library m) {
+		super(m);
+	}
+}

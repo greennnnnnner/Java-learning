@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+public class ManyVehicles{
+	private ArrayList<Vehicle> vehicles;//set arributes
+	public ManyVehicles(){//construtor
+		this.vehicles = new ArrayList<Vehicle>();
+	}
+	public void addVehicle(Vehicle v) {
+		this.vehicles.add(v);//add element to arraylist
+	}
+	public  int calcAvgSpeed() {
+		int sumSpeed=0;//default value of all vehicle's speed
+		for(Vehicle v:this.vehicles) {//enhanced for loop 
+			sumSpeed += v.getSpeed();
+		}
+		return sumSpeed/this.vehicles.size(); 
+	}
+}

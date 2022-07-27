@@ -1,0 +1,16 @@
+
+public class ControllerMoreBook extends Controller{
+	public ControllerMoreBook(Library m) {
+		super(m);
+	}
+	public String moreBook(String name, String number) {
+		try {
+			m.moreBook(name, Integer.parseInt(number));
+			return "";
+		} catch (UnknownUserException ex) {
+			return ex.getMessage();
+		} catch (NotALenderException ex) {
+			return "BUG! this should never happen";
+		}
+	}
+}

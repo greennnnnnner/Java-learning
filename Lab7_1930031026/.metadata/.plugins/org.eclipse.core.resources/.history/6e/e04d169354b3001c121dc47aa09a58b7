@@ -1,0 +1,7 @@
+package question2;
+
+public class Dog extends {
+	public Dog(String name) {
+		super(name);
+	}
+}

@@ -1,0 +1,34 @@
+package question1;
+
+public class AutoRobot {
+	private double currentSpeed;
+	private String name;
+	public AutoRobot() {
+		this.name="xyz";//set default name
+		this.currentSpeed=0;//set initial speed
+	}
+	public String getName() {
+		return this.name;
+	}
+	public double getCurrentSpeed() {
+		return this.currentSpeed;
+	}
+	public void accelerate() {
+		if (this.currentSpeed>20.0) {
+			this.currentSpeed=20.0;
+			System.out.println("Dangerous! Please stay within speed limit.");//if the speed is larger than 20, do warning
+		}else {
+		this.currentSpeed=this.currentSpeed+5.0;//else accelerate it by 5.0
+		}
+	}
+	public void brake() {
+		if(this.currentSpeed-5.0<=0) {
+			this.currentSpeed=0;//restrict the speed less than 0
+		}else {
+			this.currentSpeed=this.currentSpeed-5.0;
+		}
+	}
+	public void showStatus() {
+		System.out.println("Hello there, my name is %s and my current speed is %f", this.name,this.currentSpeed);
+	}
+}

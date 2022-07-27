@@ -1,0 +1,10 @@
+
+
+public class Snippet {
+	public static void main(String[] args) {
+		if(c.create(t1.getText(),t2.getText(),1 )=="") {
+				        					//c.create(t1.getText(), t2.getText(), 1);
+				        				}else {JOptionPane.showMessageDialog(null,c.create(t1.getText(),t2.getText(),1),"Window Title" ,JOptionPane.INFORMATION_MESSAGE);
+				        				}
+	}
+}

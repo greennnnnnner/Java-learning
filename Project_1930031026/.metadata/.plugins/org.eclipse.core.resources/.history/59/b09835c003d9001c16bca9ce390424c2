@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
+
+public class HistoryPanel extends JPanel{
+	private Library m;
+	public HistoryPanel(Library m) {
+		this.m = m;
+	}
+	private int historyMax(ArrayList<Integer> h){
+		int max = h.get(0);
+		for(int i: h) {
+			if(i>max) {
+			max = i;
+			}
+		}return max;
+	}
+	private int historyMin(ArrayList<Integer> h){
+		int min = h.get(0);
+		for(int i: h) {
+			if(i<min) {
+			min = i;
+			}
+		}return min;
+	}
+}

@@ -1,0 +1,15 @@
+package question1;
+
+public class Student {
+	private int ID;
+	public Student(int ID) {
+		this.ID = ID;
+	}
+	public int getID() {
+		return this.ID;
+	}
+	public static void testStudent() {
+		Student Student1 = new Student(12345678);
+		System.out.println(Student1.getID()==12345678);
+	}
+}

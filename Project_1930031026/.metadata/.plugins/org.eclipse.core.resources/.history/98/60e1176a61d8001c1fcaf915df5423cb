@@ -1,0 +1,6 @@
+
+public class UnknownUserExceptionException extends Exception{
+	public NotALenderException(String msg) {
+		super(msg);
+	}
+}

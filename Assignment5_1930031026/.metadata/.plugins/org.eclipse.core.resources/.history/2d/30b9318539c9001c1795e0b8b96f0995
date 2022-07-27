@@ -1,0 +1,21 @@
+
+public class Vehicle implements Movable{
+	private int speedLimit;
+	private int speed;
+	public Vehicle(int speedLimit, int speed){
+		this.speedLimit = speedLimit;
+		this.speed = speed;
+	}
+	public int accelerate(int amount) throws ExceedSpeedLimit{
+		
+		if(amount >= 0 && this.speed+amount<=this.speedLimit) {
+			this.speed += amount;
+		}else if(this.speed+amount>speedLimit) {
+			throw new ExceedSpeedLimit("");
+		}
+		return this.speed;
+	}
+	public static void testVehicle() {
+		//The Vehicle class is abstract. We cannot create objects from this class. Therefore, we cannot test anything
+			}
+}

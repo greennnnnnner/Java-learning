@@ -1,0 +1,7 @@
+
+public class ControllerSimple {
+	private Library m;
+	public  ControllerSimple(Library m) {
+		
+	}
+}

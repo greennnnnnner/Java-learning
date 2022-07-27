@@ -1,0 +1,23 @@
+package question3;
+
+public class Bird extends Animal{
+	public Bird(String name) {
+		super(name);
+	}
+	private int numOfEggs;
+	public int getNumberOfEggs() {
+		return this.numOfEggs;
+	}
+	public int getLegs() {
+		return 2;
+	}
+	public boolean canFly() {
+		return true;
+	}
+	public static void testBird() {
+		Bird b = new Bird("bird");
+		System.out.println(b.getName()=="bird");
+		System.out.println(b.getLegs()==2);
+		System.out.println(b.canFly()==true);
+	}
+}

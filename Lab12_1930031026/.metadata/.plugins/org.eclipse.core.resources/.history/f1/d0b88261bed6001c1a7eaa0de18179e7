@@ -1,0 +1,8 @@
+import javax.swing.JLabel;
+public class ViewNumber extends View<Controller>{
+	public ViewNumber(Model m, Controller c) {
+		super(m, c);
+	}
+
+	private JLable label;
+}

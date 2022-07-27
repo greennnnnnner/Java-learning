@@ -1,0 +1,23 @@
+
+public class Dot extends Shape{
+	public Dot(double x, double y) {
+		super(x,y);
+	}
+	public double area() {
+		return 0.0;
+	}
+	public void resize(double newSize) throws CannotResizeException{
+		throw new CannotResizeException("Cannot resize!");
+	}
+	public static void testDot() {
+		Dot d = new Dot(1.0,1.0);
+		System.out.println(d.getX()==1.0);
+		System.out.println(d.getY()==1.0);
+		System.out.println(d.area()==0.0);
+		try{
+			d.resize(1.0);
+		}catch(CannotResizeException e) {
+			
+		}
+	}
+}

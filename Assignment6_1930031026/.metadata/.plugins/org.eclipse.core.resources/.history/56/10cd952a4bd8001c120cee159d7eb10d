@@ -1,0 +1,12 @@
+import javax.swing.JFrame;
+public class MyFrame extends JFrame {
+	public MyFrame() {
+		this.setTitle("My Bubble Game");
+		this.setSize(200, 100);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Model m = new Model();
+		this.add(new ViewBubbles(m));
+		this.setVisible(true);
+		}
+}
+

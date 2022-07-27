@@ -1,0 +1,28 @@
+public class Bubble extends Shape{
+	private double radius;//represents the radius of the bubble
+	public Bubble(int x, int y) {
+		super(x,y);
+		this.radius = 10;
+	}
+	// Find the point (wx, wy) inside the window which is closest to the
+	// center (x, y) of the circle. In other words, find the wx in the
+	// interval [0, w - 1] which is closest to x, and find the wy in the
+	// interval [0, h - 1] which is closest to y.
+	// If the distance between (wx, wy) and (x, y) is less than the radius
+	// of the circle (using Pythagoras's theorem) then at least part of
+	// the circle is visible in the window.
+	// Note: if the center of the circle is inside the window, then (wx, wy)
+	// is the same as (x, y), and the distance is 0.
+	public boolean isVisible(int w, int h) {
+		double x = getX();
+		double y = getY();
+		double wx = (x < 0 ? 0 : (x > w - 1 ? w - 1 : x));
+		double wy = (y < 0 ? 0 : (y > h - 1 ? h - 1 : y));
+		double dx = wx - x;
+		double dy = wy - y;
+		return dx * dx + dy * dy <= radius * radius;
+	}
+	public boolean isIn(int x, int y) {
+		return radius*radius >= (x-this.getX())*(x-this.getX())+(y-this.getY())*(y-this.getY());
+	}
+}

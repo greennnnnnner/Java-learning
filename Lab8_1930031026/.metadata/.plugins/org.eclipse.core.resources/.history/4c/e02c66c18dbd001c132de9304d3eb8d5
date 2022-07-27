@@ -1,0 +1,26 @@
+
+public class Rectangle extends Shape{
+	private double width;
+	private double length;
+	public Rectangle(double x, double y, double width, double length){
+		super(x,y);
+		this.width = width;
+		this.length = length;
+	}
+	public double area() {
+		return this.length*this.width;
+	}
+	public void resize(double newSize) {
+		this.length = newSize;
+		this.width = newSize;
+	}
+	public static void testRectangle() {
+		Rectangle r = new Rectangle(1.0,2.0,3.0,4.0);
+		System.out.println(r.getX()==1.0);
+		System.out.println(r.getY()==2.0);
+		System.out.println(r.area()==12.0);
+		r.resize(5.0);
+		System.out.println(r.area()==25.0);		
+	}
+	
+}

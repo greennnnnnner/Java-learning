@@ -1,0 +1,27 @@
+import java.awt.Button;
+import java.awt.GridLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class ViewGetBook extends View<ControllerGetBook>{
+	private JTextField t;
+	public ViewGetBook(Library m, ControllerGetBook c){
+		super(m,c);
+		this.setTitle("View Reset");
+		this.setSize(300, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		t = new JTextField();
+		t.setText("Type a user name here");
+		Button b1 = new Button("Tell me the book number");
+		GridLayout gl = new GridLayout();
+		this.setLayout(gl);
+		this.add(t);
+		this.add(b1);
+		this.setVisible(true);
+	}
+	public void update() {
+		
+	}
+}

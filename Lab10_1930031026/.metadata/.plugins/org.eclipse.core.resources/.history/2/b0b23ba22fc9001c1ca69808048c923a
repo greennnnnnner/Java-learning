@@ -1,0 +1,11 @@
+import javax.swing.*;
+import java.awt.*;
+public class MyPanel extends JPanel{
+	public MyPanel(LayoutManager layout) {
+		super(layout);
+	}
+	@Override
+	protected void paintComponent(Graphics g) {
+		g.drawString("hello",20,80);
+	}
+}

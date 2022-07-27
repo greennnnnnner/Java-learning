@@ -1,0 +1,6 @@
+
+public class LapinSauteChasseur extends EuropeanRabbit{
+	public LapinSauteChasseur() {
+		super("Delicious", 0.5);
+	}//constructor takes no argument
+}

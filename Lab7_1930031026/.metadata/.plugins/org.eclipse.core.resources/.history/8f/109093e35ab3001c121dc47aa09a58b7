@@ -1,0 +1,8 @@
+package question4;
+
+public class Magpie extends Bird{
+	public Magpie(String name) {
+		super(name,6);
+	}
+
+}

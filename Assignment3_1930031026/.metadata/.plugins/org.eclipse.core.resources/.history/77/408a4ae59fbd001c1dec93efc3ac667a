@@ -1,0 +1,9 @@
+
+public class FrankTheRabbit extends Rabbit{
+	public FrankTheRabbit() {
+		super("Frank", 100.0);
+	}//constructor takes no arguments
+	public boolean isCookable() {
+		return false;
+	}//override 
+}

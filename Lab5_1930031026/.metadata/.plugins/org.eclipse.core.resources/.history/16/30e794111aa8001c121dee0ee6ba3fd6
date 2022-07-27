@@ -1,0 +1,22 @@
+package question7;
+
+public class Animal extends LivingThing{
+	private double weight=2.0;
+	public Animal(String name, double weight) {
+		Super(name);
+		this.weight = weight;
+	}
+	public double getWeight() {
+		return this.weight;
+	}
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	public static void testAnimal() {
+		Animal a = new Animal("Ani", 3.0);
+		System.out.println(a.getName()=="Ani");
+		a.setWeight(4.0);
+		System.out.println(a.getWeight()==4.0);
+		System.out.println(a);
+	}
+}

@@ -1,0 +1,93 @@
+import java.awt.Graphics;
+import java.util.ArrayList;
+
+public class Model {
+	private int score;
+	private ArrayList<IShape> bubbles;
+	public Model() {
+		this.score = 0;
+		bubbles = new ArrayList<IShape>();
+	}
+	public int getScore() {
+		return this.score; 
+	}
+	public void addBubble(int w, int h) {
+		Bubble b = new Bubble((int)(w*Math.random()), (int)(h* Math.random()));//instantiate a new bubble
+		this.bubbles.add(b);
+	}
+	public void moveAll(int dx, int dy) {
+		for(IShape i: this.bubbles) {//an enhanced for loop to move all the members inside this arraylist
+			i.setX(i.getX()+dx);
+			i.setY(i.getY()+dy);
+		}
+	}
+	public void clearInvisibles(int w, int h) {
+		for(int i = bubbles.size()-1; i>=0; i--) {//a for loop to delete all the members inside this arraylist that are not visible
+			Bubble b = (Bubble)this.bubbles.get(i);
+			if(!b.isVisible(w, h)) {
+				this.bubbles.remove(i);//remove invisible bubbles
+				this.score--;//score decreace 1 each time one bubble is deleted
+			}
+		}
+	}
+	public void deleteBubblesAtPoint(int x, int y) {
+		for(int i = bubbles.size()-1; i>=0; i--) {//a for loop to delete all the members contain this coordinate
+			Bubble b = (Bubble)this.bubbles.get(i);
+			if((b.getX()-x)*(b.getX()-x)+(b.getY()-y)*(b.getY()-y)>=100) {
+				this.bubbles.remove(i);//remove invisible bubbles
+				this.score++;//score increase 1 each time one bubble is deleted
+			}
+		}
+	}
+	public void drawAll(Graphics g) {
+		for(IShape i: this.bubbles) {//enhanced loop to draw all members
+			i.draw(g);
+		}
+	}
+	public static void testModel() {
+		Model m = new Model();
+		System.out.println(m.getScore() == 0);
+		// Testing the bubbles arraylist by directly accessing
+		// the arraylist inside the object m. This is not very clean (it only
+		// works when the tests are done from inside the class itself) but it
+		// allows us to test more methods.
+		System.out.println(m.bubbles.size() == 0);
+		// Add two bubbles.
+		m.addBubble(100, 100);
+		m.addBubble(100, 100);
+		System.out.println(m.getScore() == 0);
+		System.out.println(m.bubbles.size() == 2);
+		// The two bubbles we have are somewhere in the square ([0, 99), [0, 99)).
+		m.clearInvisibles(200, 200);
+		System.out.println(m.getScore() == 0);
+		System.out.println(m.bubbles.size() == 2);
+		m.clearInvisibles(0, 0);
+		System.out.println(m.getScore() == -2);
+		System.out.println(m.bubbles.size() == 0);
+		// Adding two bubbles again and moving them out of the window.
+		m.addBubble(100, 100);
+		m.addBubble(100, 100);
+		System.out.println(m.getScore() == -2);
+		System.out.println(m.bubbles.size() == 2);
+		m.moveAll(200, 200);
+		System.out.println(m.getScore() == -2);
+		System.out.println(m.bubbles.size() == 2);
+		m.clearInvisibles(200, 200);
+		System.out.println(m.getScore() == -4);
+		System.out.println(m.bubbles.size() == 0);
+		// Adding two bubbles again and clicking into them to remove them.
+		m.addBubble(10, 10);
+		m.addBubble(10, 10);
+		System.out.println(m.getScore() == -4);
+		System.out.println(m.bubbles.size() == 2);
+		// The two bubbles we have are somewhere in the square ([0, 9), [0, 9)).
+		m.deleteBubblesAtPoint(5, 5);
+		System.out.println(m.getScore() == -2);
+		System.out.println(m.bubbles.size() == 0);
+		// We cannot test the drawAll method because we don't have any graphics object.
+		// Adding a bubble again and clearing everything.
+		m.addBubble(100, 100);
+		System.out.println(m.getScore() == -2);
+		System.out.println(m.bubbles.size() == 1);	
+	}
+}

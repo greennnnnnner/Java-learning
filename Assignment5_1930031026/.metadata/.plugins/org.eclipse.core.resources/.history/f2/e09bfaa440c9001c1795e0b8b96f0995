@@ -1,0 +1,12 @@
+
+public class Car extends Vehicle{//extends from vehicle class
+	public Car(int speedLimit, int speed)throws Exception {
+		super(speedLimit, speed);
+	}//first constructor
+	public Car(int speed) throws Exception {
+		super(120, speed);//take 120 as speed limit by default
+	}
+	public boolean canFly() {
+		return false;
+	}
+}

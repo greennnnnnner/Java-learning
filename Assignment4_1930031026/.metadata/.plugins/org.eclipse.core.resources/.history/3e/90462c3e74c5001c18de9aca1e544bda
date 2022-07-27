@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ManyCourses {
+	private ArrayList Courses;
+	public ManyCourses(){
+		this.Courses = new ArrayList();//constructor
+		//creating a new ArrayList
+	}
+	public void addCourse(Learnable c) {
+		this.Courses.add(c);//add a learnable to list
+	}
+	public void listCourses() {
+		for(Object c: this.Courses) {
+			Learnable l = (Learnable) c;
+			System.out.println();//print information one by one
+		}
+	}
+}

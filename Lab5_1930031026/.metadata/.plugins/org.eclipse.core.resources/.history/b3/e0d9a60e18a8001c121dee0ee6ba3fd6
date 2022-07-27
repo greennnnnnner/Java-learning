@@ -1,0 +1,10 @@
+package question6;
+
+public class Start {
+	public static void main(String[] args) {
+		Cat.testCat();
+		Dog.testDog();
+		Student.testStudent();
+		Bird.testBird();
+	}
+}//If student has a bird as a pet, this student can get the altitude of this bird, because altitude is a public attribute of bird

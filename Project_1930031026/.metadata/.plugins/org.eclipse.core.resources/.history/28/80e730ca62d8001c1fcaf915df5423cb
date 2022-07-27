@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class Library {
+	private String name;
+	private ArrayList<IUser> users;
+	public Library(String name) {//constructor
+		this.name = name;
+		ArrayList<IUser> users = new ArrayList<IUser>();//create a empty new arraylist
+	}
+	public void addUser(IUser user) {
+		users.add(user);//add member to arraylist
+	}
+	public int totalBorrowBooks() {
+		int total = 0;
+		for(IUser u : users) {//enhanced loop
+			total += u.getBook();
+		}//add all users's books together
+		return total;
+	}
+	public int getBook(String name) throws UnknownUserException {
+		for(IUser u: users) {
+			if(u.getName()==name) {
+				return u.getBook();
+			}
+		}throw new UnknownUserException("User "+name+" unknown.");
+	}
+	
+}

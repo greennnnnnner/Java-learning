@@ -1,0 +1,16 @@
+import java.awt.Point;
+
+public class ControllerClicks extends Controller{
+	public ControllerClicks(Model m) {
+		super(m);
+	}//constructor
+	public void mouseClicked(Point p) {
+		
+	}
+	public void resetClicked() {
+		
+	}
+	public void undoClicked() {
+		
+	}
+}

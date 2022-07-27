@@ -1,0 +1,10 @@
+package question1;
+
+public class Tennis extends Sport{
+	private int playerNumber;
+
+	public Tennis(){
+		super(2);
+		super.isFun()=false;
+	}
+}

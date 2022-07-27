@@ -1,0 +1,9 @@
+package question1;
+
+public class Tennis extends Sport{
+	private int playerNumber;
+
+	public Tennis() {
+		this.playerNumber=2;
+	}
+}
